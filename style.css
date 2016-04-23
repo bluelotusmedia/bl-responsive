@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Theme Name: Blue Lotus Responsive
+Version: 1.0
+Theme URI: http://bluelotusmedia.com
+Description: A custom responsive theme designed by Jacob Louis.
+Author: Jacob Louis 
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive, full-width, hero image, sticky header, minimal, clean, base template
+
+*/
+
+/* Navbar */
+
+.navbar-brand {padding:0; margin:0; height:auto;}
+
+.navbar-brand img {max-width:200px;}
+
+.admin-bar .navbar-fixed-top {
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .navbar-fixed-top {
+    top: 32px;
+  }
+}
+
+/* Content */
+
+.container {padding-top:50px;}
+
+/* Blog */
+
+.post__thumbnail img {max-width:100%; height:auto;}
+
+/* Footer */
+
+#footer {clear:both;}
