@@ -42,6 +42,9 @@ li.current-menu-item a {
 @media screen and (min-width: 783px) {
   .admin-bar .navbar-fixed-top {
     top: 32px; } }
+@media screen and (max-width: 600px) {
+  #wpadminbar { position: fixed; }
+  }
 /* Content */
 .container {
   padding-top: 50px; }
@@ -55,6 +58,20 @@ li.current-menu-item a {
 .post__thumbnail img {
   max-width: 100%;
   height: auto; }
+  
+/* Single Post */
+
+.next-prev {position: relative; width:100%; display:block; margin:20px 0;}
+.next-prev__next {position: absolute; right:0; bottom:0}
+.next-prev__prev {position: absolute; left:0; bottom:0}
+
+.comment-form-comment label {display:block;}
+
+textarea#comment {width:100%;}
+  
+/* Sidebar */
+
+.sidebar {margin-top:20px; list-style:none;}
 
 /* Footer */
 #footer {

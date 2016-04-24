@@ -8,12 +8,12 @@ Template Name: Full-width page (no title)
 if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post(); ?>
-        <article class="post" id="post-<?php the_ID(); ?>">
+        <article class="page-full-width page" id="post-<?php the_ID(); ?>">
 			
-            <div class="row">
+            <div class="row page__row">
             	
-            	<div class="col-xs-12">
-					<div class="post__content">
+            	<div class="col-xs-12 page-full-width__grid">
+					<div class="page__content">
                     <?php the_content(); ?>
                     </div>
                 </div>
