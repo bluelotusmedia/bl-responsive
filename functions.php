@@ -75,5 +75,8 @@ function bluelotus_sidebar_setup(){
 
 add_action ('widgets_init','bluelotus_sidebar_setup');
 
+// Include Walker File
+
+require get_template_directory() . '/inc/walker.php';
 
 ?>

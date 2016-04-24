@@ -6,6 +6,7 @@
 
   <title><?php wp_title(); ?></title>
   <meta name="description" content="<?php get_bloginfo( 'description' ); ?>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
 
   <!--[if lt IE 9]>
@@ -33,7 +34,8 @@
         <?php wp_nav_menu(array(
 				'theme_location'=>'header', 
 				'container'=>false,
-				'menu_class'=>'nav navbar-nav navbar-right'
+				'menu_class'=>'nav navbar-nav navbar-right',
+				'walker' => new Walker_Main_Nav()
 				)
 			); 
 		?>

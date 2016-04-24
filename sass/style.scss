@@ -1,0 +1,60 @@
+/* Theme Name: Blue Lotus Responsive
+Version: 1.0
+Theme URI: http://bluelotusmedia.com
+Description: A custom responsive theme designed by Jacob Louis.
+Author: Jacob Louis 
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive, full-width, hero image, sticky header, minimal, clean, base template
+*/
+
+/* Variable */
+
+$background: #eee;
+$navbar-color: #fff;
+$border-color: #ddd;
+$bodytext: #333;
+$primary-color: #00f;
+$secondary-color: #0af;
+$highlight-color: #00f;
+
+
+/* Global */
+
+body {color: $bodytext; background:$background;}
+
+a {color:$primary-color;}
+a:hover {color:$secondary-color;}
+li.current-menu-item a {border-top:5px solid $highlight-color; padding-top: 10px;}
+
+
+/* Navbar */
+
+.navbar-default, .navbar-default .navbar-toggle,  {background:$navbar-color; border-color:$border-color}
+
+.navbar-brand {padding:0; margin:0; height:auto;}
+
+.navbar-brand img {max-width:200px;}
+
+.admin-bar .navbar-fixed-top {
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .navbar-fixed-top {
+    top: 32px;
+  }
+}
+
+/* Content */
+
+.container {padding-top:50px;}
+
+/* Blog */
+
+.post__meta .post-categories {display:inline-block; list-style:none; padding:0; }
+
+.post__thumbnail img {max-width:100%; height:auto;}
+
+/* Footer */
+
+#footer {clear:both;}
