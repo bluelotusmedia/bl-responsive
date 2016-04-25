@@ -29,7 +29,7 @@ class Walker_Main_Nav extends Walker_Nav_menu {
 		$li_attributes = '';
 		$class_names = $value = '';
 		
-		$classes = empty( $item->classes) ? array() : (array) $item->$classes;
+		$classes = empty( $item->$classes) ? array() : (array) $item->$classes;
 		
 		$classes[] = ($args->walker->has_children) ? 'dropdown' : '';
 		$classes[] = ($item->current || $item->current_item_anchester) ? 'active' : '';
@@ -39,7 +39,7 @@ class Walker_Main_Nav extends Walker_Nav_menu {
 			}
 		
 		$class_names = join( ' ', apply_filters('nav_menu_css_class', array_filter( $classes ), $item, $args ) );
-		$class_namse = ' class="' . esc_attr($class_names) . '"';
+		$class_names = ' class="' . esc_attr($class_names) . '"';
 		
 		$id = apply_filters('nav_menu_item_id', 'menu-item-'.$item->ID, $item, $args);
 		$id = strlen( $id ) ? ' id="' . esc_attr( $id) .'"' : '';

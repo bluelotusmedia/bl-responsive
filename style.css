@@ -14,9 +14,9 @@ body {
   background: #eee; }
 
 a {
-  color: #f00; }
+  color: #0D77B7; }
   a:hover {
-    color: #f0f; }
+    color: #00ADD8; }
 
 /* Nav */
 .navbar-default {
@@ -89,7 +89,7 @@ textarea#comment {
   clear: both; }
 
 li.current-menu-item a {
-  border-top: 5px solid #f00;
+  border-top: 5px solid #0D77B7;
   padding-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */
