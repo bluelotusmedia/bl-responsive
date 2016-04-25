@@ -30,15 +30,17 @@ add_theme_support( 'custom-header');
 add_theme_support( 'post-thumbnails');
 
 // Filter Title
-add_filter( 'wp_title', 'wpdocs_hack_wp_title_for_home' );
+/*add_filter( 'wp_title', 'dynamic_wp_title' );
  
-function wpdocs_hack_wp_title_for_home( $title, $sep, $seplocation )
+function dynamic_wp_title( $title, $sep, $seplocation )
 {
   if ( empty( $title ) && ( is_home() || is_front_page() ) ) {
-    $title = bloginfo('name') . ' $sep ' . get_bloginfo( 'description' );
-  } 
+    $title = bloginfo('name') . ' | ' . get_bloginfo( 'description' );
+  } else {
+	  $title = $title . ' | ' . bloginfo('name');
+	  }
   return $title;
-}
+}*/
 
 // Sidebar Setup
 
