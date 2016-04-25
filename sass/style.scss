@@ -31,6 +31,12 @@ a {
 
 
 /* Nav */
+
+h1#header  {
+	font-size:16px;
+	margin:15px 0;
+}
+
 .navbar-default {
 	background: $nav-bg;
 	border-color: $primary-border-color;

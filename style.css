@@ -19,6 +19,10 @@ a {
     color: #00ADD8; }
 
 /* Nav */
+h1#header {
+  font-size: 16px;
+  margin: 15px 0; }
+
 .navbar-default {
   background: #fff;
   border-color: #ccc; }

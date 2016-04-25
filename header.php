@@ -33,7 +33,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image('thumbnail_url'); ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
+		<?php if ( has_header_image() ) { ?>
+            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+            </a>
+        <?php } else { ?>
+			
+			<h1 id="header">
+			<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
+			</h1>
+			
+			<?php } ?>
+      
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
