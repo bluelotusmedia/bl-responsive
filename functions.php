@@ -3,14 +3,14 @@
 // Enqueue Scripts
 
 function bluelotus_enqueue_scripts() {
-	//css
-	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6', 'all' );
-	wp_enqueue_style( 'core', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all' );
 	//js
 	wp_enqueue_script( 'waypoints-js', get_template_directory_uri() . '/js/jquery.waypoints.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.6', true );
 	wp_enqueue_script( 'jquery'); 
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true ); 
+	//css
+	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6', 'all' );
+	wp_enqueue_style( 'core', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all' );
 }
 
 add_action( 'wp_enqueue_scripts', 'bluelotus_enqueue_scripts' );

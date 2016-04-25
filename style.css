@@ -7,7 +7,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive, full-width, hero image, sticky header, minimal, clean, base template
 */
-/* Variables */
+/* SCSS Variables */
 /* Global */
 body {
   color: #333;
@@ -32,6 +32,13 @@ a {
   height: auto; }
   .navbar-brand img {
     max-width: 200px; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  background: none;
+  border-top: #0D77B7 5px solid; }
+
+.navbar-nav > li.active > a {
+  padding-top: 10px; }
 
 .admin-bar .navbar-fixed-top {
   top: 46px; }

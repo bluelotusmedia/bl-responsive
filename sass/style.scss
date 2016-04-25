@@ -7,7 +7,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive, full-width, hero image, sticky header, minimal, clean, base template
 */
-/* Variables */
+/* SCSS Variables */
 
 $primary-text: #333;
 $background-main: #eee;
@@ -17,6 +17,7 @@ $nav-bg: #fff;
 $primary-border-color: #ccc;
 
 /* Global */
+
 body {
 	color: $primary-text;
 	background: $background-main;
@@ -28,6 +29,7 @@ a {
 	}
 }
 
+
 /* Nav */
 .navbar-default {
 	background: $nav-bg;
@@ -37,6 +39,7 @@ a {
 		border-color: $primary-border-color;
 	}
 }
+
 .navbar-brand {
 	padding: 0;
 	margin: 0;
@@ -45,6 +48,14 @@ a {
 		max-width: 200px;
 	}
 }
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background:none;
+	border-top:$primary-color 5px solid;
+}
+
+.navbar-nav>li.active>a {padding-top:10px;}
+
 .admin-bar .navbar-fixed-top {
 	top: 46px;
 }
@@ -54,57 +65,72 @@ a {
 		top: 32px;
 	}
 }
+
 @media screen and(max-width: 600px) {
 	#wpadminbar {
 		position: fixed;
 	}
 }
+
 /* Content */
+
 .container {
 	padding-top: 50px;
 }
+
 /* Blog */
+
 .post__meta .post-categories {
 	display: inline-block;
 	list-style: none;
 	padding: 0;
 }
+
 .post__thumbnail img {
 	max-width: 100%;
 	height: auto;
 }
+
 .comment-form-comment label {
 	display: block;
 }
+
 textarea#comment {
 	width: 100%;
 	border-color: $primary-border-color;
 }
+
 .next-prev {
 	position: relative;
 	width: 100%;
 	display: block;
 	margin: 20px 0;
 }
+
 .next-prev__next {
 	position: absolute;
 	right: 0;
 	bottom: 0;
 }
+
 .next-prev__prev {
 	position: absolute;
 	left: 0;
 	bottom: 0;
 }
+
 /* Sidebar */
 .sidebar {
 	margin-top: 20px;
 	list-style: none;
 }
+
 /* Footer */
+
 #footer {
 	clear: both;
 }
+
 li.current-menu-item a {
 	border-top: 5px solid $primary-color;
 	padding-top: 10px;
