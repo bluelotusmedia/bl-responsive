@@ -7,54 +7,106 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive, full-width, hero image, sticky header, minimal, clean, base template
 */
+/* Variables */
 
-/* Variable */
-
-$background: #eee;
-$navbar-color: #fff;
-$border-color: #ddd;
-$bodytext: #333;
-$primary-color: #00f;
-$secondary-color: #0af;
-$highlight-color: #00f;
-
+$primary-text: #333;
+$background-main: #eee;
+$primary-color: #f00;
+$secondary-color: #f0f;
+$nav-bg: #fff;
+$primary-border-color: #ccc;
 
 /* Global */
+body {
+	color: $primary-text;
+	background: $background-main;
+}
+a {
+	color: $primary-color;
+	&:hover {
+		color: $secondary-color;
+	}
+}
 
-body {color: $bodytext; background:$background;}
-
-a {color:$primary-color;}
-a:hover {color:$secondary-color;}
-li.current-menu-item a {border-top:5px solid $highlight-color; padding-top: 10px;}
-
-
-/* Navbar */
-
-.navbar-default, .navbar-default .navbar-toggle,  {background:$navbar-color; border-color:$border-color}
-
-.navbar-brand {padding:0; margin:0; height:auto;}
-
-.navbar-brand img {max-width:200px;}
-
+/* Nav */
+.navbar-default {
+	background: $nav-bg;
+	border-color: $primary-border-color;
+	.navbar-toggle {
+		background: $nav-bg;
+		border-color: $primary-border-color;
+	}
+}
+.navbar-brand {
+	padding: 0;
+	margin: 0;
+	height: auto;
+	img {
+		max-width: 200px;
+	}
+}
 .admin-bar .navbar-fixed-top {
-  top: 46px;
-}
-@media screen and (min-width: 783px) {
-  .admin-bar .navbar-fixed-top {
-    top: 32px;
-  }
+	top: 46px;
 }
 
+@media screen and(min-width: 783px) {
+	.admin-bar .navbar-fixed-top {
+		top: 32px;
+	}
+}
+@media screen and(max-width: 600px) {
+	#wpadminbar {
+		position: fixed;
+	}
+}
 /* Content */
-
-.container {padding-top:50px;}
-
+.container {
+	padding-top: 50px;
+}
 /* Blog */
-
-.post__meta .post-categories {display:inline-block; list-style:none; padding:0; }
-
-.post__thumbnail img {max-width:100%; height:auto;}
-
+.post__meta .post-categories {
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+}
+.post__thumbnail img {
+	max-width: 100%;
+	height: auto;
+}
+.comment-form-comment label {
+	display: block;
+}
+textarea#comment {
+	width: 100%;
+	border-color: $primary-border-color;
+}
+.next-prev {
+	position: relative;
+	width: 100%;
+	display: block;
+	margin: 20px 0;
+}
+.next-prev__next {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.next-prev__prev {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+/* Sidebar */
+.sidebar {
+	margin-top: 20px;
+	list-style: none;
+}
 /* Footer */
+#footer {
+	clear: both;
+}
+li.current-menu-item a {
+	border-top: 5px solid $primary-color;
+	padding-top: 10px;
+}
 
-#footer {clear:both;}

@@ -7,34 +7,31 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive, full-width, hero image, sticky header, minimal, clean, base template
 */
-/* Variable */
+/* Variables */
 /* Global */
 body {
   color: #333;
   background: #eee; }
 
 a {
-  color: #00f; }
+  color: #f00; }
+  a:hover {
+    color: #f0f; }
 
-a:hover {
-  color: #0af; }
-
-li.current-menu-item a {
-  border-top: 5px solid #00f;
-  padding-top: 10px; }
-
-/* Navbar */
-.navbar-default, .navbar-default .navbar-toggle {
+/* Nav */
+.navbar-default {
   background: #fff;
-  border-color: #ddd; }
+  border-color: #ccc; }
+  .navbar-default .navbar-toggle {
+    background: #fff;
+    border-color: #ccc; }
 
 .navbar-brand {
   padding: 0;
   margin: 0;
   height: auto; }
-
-.navbar-brand img {
-  max-width: 200px; }
+  .navbar-brand img {
+    max-width: 200px; }
 
 .admin-bar .navbar-fixed-top {
   top: 46px; }
@@ -43,8 +40,8 @@ li.current-menu-item a {
   .admin-bar .navbar-fixed-top {
     top: 32px; } }
 @media screen and (max-width: 600px) {
-  #wpadminbar { position: fixed; }
-  }
+  #wpadminbar {
+    position: fixed; } }
 /* Content */
 .container {
   padding-top: 50px; }
@@ -58,23 +55,41 @@ li.current-menu-item a {
 .post__thumbnail img {
   max-width: 100%;
   height: auto; }
-  
-/* Single Post */
 
-.next-prev {position: relative; width:100%; display:block; margin:20px 0;}
-.next-prev__next {position: absolute; right:0; bottom:0}
-.next-prev__prev {position: absolute; left:0; bottom:0}
+.comment-form-comment label {
+  display: block; }
 
-.comment-form-comment label {display:block;}
+textarea#comment {
+  width: 100%;
+  border-color: #ccc; }
 
-textarea#comment {width:100%;}
-  
+.next-prev {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 20px 0; }
+
+.next-prev__next {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
+.next-prev__prev {
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+
 /* Sidebar */
-
-.sidebar {margin-top:20px; list-style:none;}
+.sidebar {
+  margin-top: 20px;
+  list-style: none; }
 
 /* Footer */
 #footer {
   clear: both; }
+
+li.current-menu-item a {
+  border-top: 5px solid #f00;
+  padding-top: 10px; }
 
 /*# sourceMappingURL=style.css.map */
