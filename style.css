@@ -8,6 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive, full-width, hero image, sticky header, minimal, clean, base template
 */
 /* SCSS Variables */
+/* SCSS MIXINS */
 /* Global */
 body {
   color: #333;
@@ -42,6 +43,10 @@ h1#header {
   border-top: #0D77B7 5px solid; }
 
 .navbar-nav > li.active > a {
+  padding-top: 10px; }
+
+li.current-menu-item a {
+  border-top: 5px solid #0D77B7;
   padding-top: 10px; }
 
 .admin-bar .navbar-fixed-top {
@@ -99,8 +104,39 @@ textarea#comment {
 #footer {
   clear: both; }
 
-li.current-menu-item a {
-  border-top: 5px solid #0D77B7;
-  padding-top: 10px; }
+#footer-widgets li.current-menu-item a, #menu-secondary-menu li.current-menu-item a {
+  border-top: 0; }
+
+.footer-menu ul {
+  list-style: none;
+  display: block-inline;
+  clear: both;
+  padding: 0; }
+
+.footer-menu ul li {
+  display: inline; }
+
+.footer-menu ul li::after {
+  content: " | "; }
+
+.footer-menu ul li:last-child::after {
+  content: ""; }
+
+.bl-copyright, .bl-websitecredit {
+  clear: both;
+  display: inline-block; }
+
+.bl-websitecredit {
+  float: right; }
+
+@media screen and (max-width: 600px) {
+  .bl-copyright, .bl-websitecredit {
+    float: none;
+    text-align: center;
+    display: block; } }
+.bl-spacer {
+  height: 25px;
+  display: block;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

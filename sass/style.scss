@@ -16,6 +16,13 @@ $secondary-color: #00ADD8;
 $nav-bg: #fff;
 $primary-border-color: #ccc;
 
+/* SCSS MIXINS */
+
+@mixin spacer-mixin-height($height) {
+  height: $height;
+   
+}
+
 /* Global */
 
 body {
@@ -61,6 +68,11 @@ h1#header  {
 }
 
 .navbar-nav>li.active>a {padding-top:10px;}
+
+li.current-menu-item a {
+	border-top: 5px solid $primary-color;
+	padding-top: 10px;
+}
 
 .admin-bar .navbar-fixed-top {
 	top: 46px;
@@ -137,8 +149,25 @@ textarea#comment {
 	clear: both;
 }
 
-li.current-menu-item a {
-	border-top: 5px solid $primary-color;
-	padding-top: 10px;
+#footer-widgets li.current-menu-item a, #menu-secondary-menu li.current-menu-item a  {border-top:0;}
+
+.footer-menu ul {list-style:none; display:block-inline; clear:both; padding:0;}
+
+.footer-menu ul li {display:inline; }
+
+.footer-menu ul li::after {content:" | ";}
+.footer-menu ul li:last-child::after {content:"";}
+
+.footer__credits-row {}
+
+.bl-copyright, .bl-websitecredit {clear:both; display:inline-block; }
+.bl-websitecredit {float:right; }
+
+@media screen and(max-width: 600px) {
+	.bl-copyright, .bl-websitecredit {float:none; text-align:center; display:block; }
 }
+
+.bl-spacer { @include spacer-mixin-height(25px); display:block; width:100%;}
+
+
 
