@@ -10,7 +10,7 @@ function bluelotus_enqueue_scripts() {
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true ); 
 	//css
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6', 'all' );
-	wp_enqueue_style( 'core', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all' );
+	wp_enqueue_style( 'core', get_template_directory_uri() . '/css/style.css', array(), '1.0.1', 'all' );
 }
 
 add_action( 'wp_enqueue_scripts', 'bluelotus_enqueue_scripts' );
@@ -29,18 +29,6 @@ add_theme_support( 'custom-background');
 add_theme_support( 'custom-header');
 add_theme_support( 'post-thumbnails');
 
-// Filter Title
-/*add_filter( 'wp_title', 'dynamic_wp_title' );
- 
-function dynamic_wp_title( $title, $sep, $seplocation )
-{
-  if ( empty( $title ) && ( is_home() || is_front_page() ) ) {
-    $title = bloginfo('name') . ' | ' . get_bloginfo( 'description' );
-  } else {
-	  $title = $title . ' | ' . bloginfo('name');
-	  }
-  return $title;
-}*/
 
 // Sidebar Setup
 

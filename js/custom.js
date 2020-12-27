@@ -1,27 +1,46 @@
 jQuery(document).ready(function(){
 	
-	var divs = jQuery('div')
-  , nav = jQuery('nav')
-  , nav_height = nav.outerHeight();
-  
-  jQuery(window).on('scroll', function () {
-  var cur_pos = jQuery(this).scrollTop() +100;
-		
-divs.each(function() {
-    var top = jQuery(this).offset().top - nav_height,
-        bottom = top + jQuery(this).outerHeight();
- 
-    if (cur_pos >= top && cur_pos <= bottom) {
-      nav.find('a').removeClass('active');
-      divs.removeClass('active');
- 
-      jQuery(this).addClass('active');
-      nav.find('a[href$="#'+jQuery(this).attr('id')+'"]').addClass('active');
-    }
- 	});
-  
-  });
+	//// adds jQuery page load functionality
+//	 bodyVar = jQuery("body");
+//
+//	jQuery(document).on({
+//		ajaxStart: function() { bodyVar.addClass("loading");    },
+//		 ajaxStop: function() { bodyVar.removeClass("loading"); }    
+//	});
+//	 
+//	jQuery('#menu-main-menu li a').click(function(e) {
+//		
+//		e.preventDefault();
+//		
+//		if ( jQuery( this ).hasClass( "dropdown-toggle" ) ) {
+// 
+//       
+// 
+//    	} else {
+//			
+//				ajaxHref = jQuery(this).attr("href");
+//				
+//					jQuery( "#main_content" ).load( ajaxHref, " #main_content", function() {
+//						
+//					jQuery('.collapse').css('display', 'none');
+//					
+//				}); // loads content into main_content div
+//			
+//			}
+//		
+//		
+//	}); // end jQuery main nav function
+//		
+//		// toggles collapsed mobile menu	
+//		jQuery(".navbar-toggle").toggle(
+//			function(){jQuery(".collapse").css({"display": "block"});},
+//			function(){jQuery(".collapse").css({"display": "none"});
+//		});
+//		
+//		
+//	
+	
 
-});
+}); // close ready function
   
   
